@@ -1,0 +1,60 @@
+:PROPERTIES:
+:ID:       4b210310-25e8-4305-9553-371306669eda
+:END:
+#+title: DatathonLISH-22.org
+
+* Data
+** **Target Feature*:
+
+~status_group~ is the key label that you need to predict. It can take on two possible values:
++ ~0~ - the waterpoint is operational and there are no repairs needed
++ ~1~ - the waterpoint needs repairs
+
+** **Predictors**:
+*** [#C] ~amount_tsh~ -  Total static head (amount water available to waterpoint)
+*** [#A] ~date_recorded~ - The date the row was entered
+*** [#A] ~funder~ - Who funded the well
+*** ~gps_height~ - Altitude of the well
+*** [#A] ~installer~ - Organization that installed the well
+*** [#A] ~longitude~ - GPS coordinate
+*** [#A] ~latitude~ - GPS coordinate
+*** Geographic subgroups
+*** ~population~ - Population around the well
+*** [#C] ~wpt_name~ - Name of the waterpoint if there is one
+*** ~basin~ - Geographic water basin
+*** ~subvillage~ - Geographic location
+*** ~region~ - Geographic location
+*** ~region_code~ - Geographic location (coded)
+*** ~district_code~ - Geographic location (coded)
+*** ~lga~ - Geographic location
+*** ~ward~ - Geographic location
+*** ~public_meeting~ - True/False
+*** [#A] _DROPPABLE COLUMNS_
+**** ~recorded_by~ - Group entering this row of data
+*** [#A] ~scheme_management~ - Who operates the waterpoint
+*** [#A] ~scheme_name~ - Who operates the waterpoint
+*** ~permit~ - If the waterpoint is permitted
+*** ~construction_year~ - Year the waterpoint was constructed
+*** ~extraction_type~ - The kind of extraction the waterpoint uses
+*** ~extraction_type_group~ - The kind of extraction the waterpoint uses
+*** ~extraction_type_class~ - The kind of extraction the waterpoint uses
+*** ~management~ - How the waterpoint is managed
+*** ~management_group~ - How the waterpoint is managed
+*** ~payment~ - What the water costs
+*** ~payment_type~ - What the water costs
+*** [#A] Water quality group
+two more names for water_quality over quality_group
+**** ~water_quality~ - The quality of the water
+**** ~quality_group~ - The quality of the water
+*** [#A] ~quantity~ - The quantity of water
+quantity group is the same
+**** ~quantity_group~ - The quantity of water
+literal repeat
+*** [#A] Source vars
+Different vars
+**** ~source~ - The source of the water
+**** ~source_type~ - The source of the water
+*** ~source_class~ - The source of the water
+*** ~waterpoint_type~ - The kind of waterpoint
+Has fewer splits than the above
+**** ~waterpoint_type_group~ - The kind of waterpoint
